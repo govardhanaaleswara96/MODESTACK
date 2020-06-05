@@ -1,0 +1,15 @@
+nav {
+  background-color: #3c99e9 !important;
+}
+nav a {
+  color: white;
+}
+.navbar-nav li a {
+  color: white;
+  padding: 15px 50px 15px 50px;
+  font-size: 25px;
+}
+.active {
+  background-color: #1361a0;
+  border-radius: 10px;
+}

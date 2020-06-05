@@ -1,0 +1,16 @@
+<app-nav-bar></app-nav-bar>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card  mt-3" *ngFor="let x of articles">
+                <div class="card-header text-center">
+                    <h4>{{x.title}}</h4>
+                </div>
+                <div class="card-body">
+                    <p>Author : {{x.username}} </p>
+                    <p>{{x.body}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

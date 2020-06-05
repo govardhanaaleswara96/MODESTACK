@@ -1,0 +1,13 @@
+#register {
+  margin-top: 5%;
+  border: 1px solid teal;
+  padding: 50px;
+}
+.error p {
+  color: red;
+  text-align: center;
+}
+a {
+  color: dodgerblue;
+  font-weight: bold;
+}

@@ -1,0 +1,13 @@
+#login {
+  margin-top: 10%;
+  border: 1px solid teal;
+  padding: 50px;
+}
+.error p {
+  color: red;
+  text-align: center;
+}
+a {
+  color: dodgerblue;
+  font-weight: bold;
+}

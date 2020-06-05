@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" id="login">
+            <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+                <h4 class="text-center">WELCOME MODESTACK</h4>
+                <p class="mt-5">
+                    <label>Enter Your Mail Id</label>
+                    <input autocomplete="on" type="text" formControlName="email" class="form-control"
+                        placeholder="Email">
+                </p>
+                <div class="error" *ngIf="loginForm.controls['email'].errors  && loginForm.controls['email'].touched">
+                    <p *ngIf="loginForm.controls['email'].errors.required">Email Is Required </p>
+                    <p *ngIf="loginForm.controls['email'].errors.email">Enter Valid Email Id </p>
+                </div>
+                <p>
+                    <label>Enter Your Password</label>
+                    <input autocomplete="on" type="password" formControlName="password" class="form-control"
+                        placeholder="Password">
+                </p>
+                <div class="error"
+                    *ngIf="loginForm.controls['password'].errors  && loginForm.controls['password'].touched">
+                    <p *ngIf="loginForm.controls['password'].errors.required">Password Is Required </p>
+                </div>
+                <div class="text-center m-2">
+                    <a routerLink="/register">Register Here !</a>
+                </div>
+                <p class="text-center">
+                    <button class="btn btn-primary btn-lg" [disabled]="loginForm.invalid">LogIn</button>
+                </p>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

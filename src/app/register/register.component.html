@@ -1,0 +1,53 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4" id="register">
+            <form [formGroup]="registerForm" (ngSubmit)="registerUser()">
+                <h4 class="text-center">Register User</h4>
+                <p class="mt-5">
+                    <label>Enter Your User Name</label>
+                    <input formControlName="username" type="text" class="form-control" placeholder="User Name">
+                </p>
+                <div class="error"
+                    *ngIf="registerForm.controls['username'].errors  && registerForm.controls['username'].touched">
+                    <p *ngIf="registerForm.controls['username'].errors.required">User Name Is Required </p>
+                    <p *ngIf="registerForm.controls['username'].errors.minlength">User Required Min Length 6</p>
+                </div>
+                <p>
+                    <label>Enter Your Email Address</label>
+                    <input formControlName="email" type="email" class="form-control" placeholder="Email">
+                </p>
+                <div class="error"
+                    *ngIf="registerForm.controls['email'].errors  && registerForm.controls['email'].touched">
+                    <p *ngIf="registerForm.controls['email'].errors.required">Email Is Required </p>
+                    <p *ngIf="registerForm.controls['email'].errors.email">Enter Valid Email Id</p>
+                </div>
+                <p>
+                    <label>Enter Your password</label>
+                    <input formControlName="password" type="password" class="form-control" placeholder="Password">
+                </p>
+                <div class="error"
+                    *ngIf="registerForm.controls['password'].errors  && registerForm.controls['password'].touched">
+                    <p *ngIf="registerForm.controls['password'].errors.required">Password Is Required </p>
+                    <p *ngIf="registerForm.controls['password'].errors.minlength">Password Required Min Length 5</p>
+                </div>
+                <p>
+                    <label>Enter Your address</label>
+                    <input formControlName="address" type="text" class="form-control" placeholder="Address">
+                </p>
+                <div class="error"
+                    *ngIf="registerForm.controls['address'].errors  && registerForm.controls['address'].touched">
+                    <p *ngIf="registerForm.controls['address'].errors.required">Address Is Required </p>
+                    <p *ngIf="registerForm.controls['address'].errors.minlength">Address Required Min Length 6</p>
+                </div>
+                <div class="text-center m-2">
+                    <a routerLink="/login">Login Here !</a>
+                </div>
+                <p class="text-center">
+                    <button class="btn btn-primary btn-lg" [disabled]="registerForm.invalid">Register </button>
+                </p>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
